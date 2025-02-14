@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./styles/style.css"/>
+</head>
+<body>
+    
+    <main>
+
+        <div class="header">
+            <div class="profile">
+                <img src="./images/user-solid.svg" alt="user" width="30"/>
+                <div class="nameAndJob">
+                    <p id="name">Suep Saepudin</p>
+                    <p id="department">Accounting</p>
+                </div>
+            </div>
+
+            <div class="clock">
+                <div class="day" id="date"></div>
+
+                <div>
+                    <span id="hour">00</span>
+                    <span id="point">:</span>
+                    <span id="minute">00</span>
+                    <span id="point">:</span>
+                    <span id="second">00</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="priorityAndDate">
+            <div class="priorityChoice">
+                <label id="asd">Priority</label>
+                <select id="choice">
+                    <option value="">Select Priority</option>
+                    <option value="low">Priority Low</option>
+                    <option value="medium">Priority Medium</option>
+                    <option value="high">Priority High</option>
+                </select>
+            </div>
+
+            <div class="dateChoice">
+                <label>Date</label>
+                <input type="date" id="dateInput" value="2025-02-04"/>
+            </div>
+        </div>
+
+        <div class="toDoList">
+            <label for="task">Task</label>
+            <textarea id="input-box" placeholder="What Should I Do Today?"></textarea>
+        </div>
+
+        <div class="button">
+            <button id="reset" type="button" onclick="clearTask()">Reset</button>
+            <button id="submit" type="submit" onclick="addTask()">Submit</button>
+        </div>
+
+        <div class="divider"> 
+            <hr>
+        </div>
+
+        <div class="controls">
+            <div class="tabs">
+                <span id="todo" class="active">To-Do List</span>
+                <span id="doneTab">Done</span>
+            </div>
+            <button id="clear-all" class="clear-button" onclick="clearAll()">Clear All</button>
+        </div>
+
+        <ul id="list-container" class="">
+            <li class="checked">Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li>
+        </ul>
+
+        <!-- <ul id="done" class="hidden">
+
+        </ul> -->
+
+    </main>
+
+    <script src="./scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #282a36;
+}
+
+main {
+    display: block;
+    width: 500px;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #fff; 
+}
+
+.profile .nameAndJob {
+    font-size: 13px;
+}
+
+.profile .nameAndJob #department {
+    font-size: 10px;
+    color: deepskyblue;
+}
+
+.clock {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.priorityAndDate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+.priorityChoice {
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 13px;
+    color: #fff;
+}
+
+.priorityChoice select {
+    width: 250px;
+    padding: 11px;
+    border: none;
+    border-radius: 5px;
+}
+
+.dateChoice {
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 13px;
+    color: #fff;
+}
+
+.dateChoice input {
+    width: 250px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.toDoList {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+    gap: 5px;
+}
+
+.toDoList label {
+    font-size: 13px;
+    color: #fff;
+}
+
+.toDoList textarea {
+    height: 100px;
+    padding: 5px;
+    border: 2px solid deepskyblue;
+    border-radius: 7px;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.button #reset {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: deepskyblue;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.button #reset:hover {
+    background-color: #eeeded;
+}
+
+.button #submit {
+    width: 200px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: deepskyblue;
+    color: #fff;
+    cursor: pointer;
+}
+
+.button #submit:hover {
+    background-color: rgb(0, 151, 202);
+}
+
+.divider {
+    margin-top: 30px;
+    width: 100%;
+    height: 3px;
+    background-color: #ddd;
+}
+
+.tab {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.tab .tabChoice {
+    display: flex;
+    gap: 30px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.controls .tabs {
+    display: flex;
+    gap: 30px;
+    font-size: 1em;
+    color: #fff;
+}
+
+.controls .tabs span {
+    cursor: pointer;
+    margin: 0 8px;
+}
+
+.controls .tabs .active {
+    text-decoration: underline;
+    text-decoration-color: deepskyblue;
+}
+
+.controls .clear-button {
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #fff;
+    background-color: deeppink;
+}
+
+.controls .clear-button:hover {
+    background-color: rgb(212, 18, 121);
+}
+
+ul li {
+    list-style: none;
+    font-size: 16px;
+    padding: 12px 8px 12px 50px;
+    color: #fff;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    gap: 10px;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url('./circle-regular.svg');
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #ddd;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url('./check-regular.svg');
+}
+
+ul li.checked::before {
+    background-image: url('./check-solid.svg');
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+}
+
+ul li span:hover {
+    background: #edeef0;
+    border-radius: 50%;
+}
+
+#list-container li {
+    display: flex;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        width: 90%;
+        min-height: 100vh;
+    }
+
+    .profile .nameAndJob {
+        font-size: 11px;
+    }
+
+    .clock {
+        font-size: 11px;
+    }
+
+    .priorityAndDate {
+        margin-top: 20px;
+
+    }
+
+    .priorityChoice {
+        font-size: 12px;
+    }
+
+    
+    .priorityChoice select {
+        width: 150px;
+    }
+    
+    .priorityChoice option {
+        font-size: 11px;
+    }
+
+    .dateChoice {
+        font-size: 12px;
+    }
+
+    .dateChoice input {
+        width: 150px;
+    }
+
+    .toDoList textarea {
+        font-size: 11px;
+    }
+
+    .button #reset {
+        width: 100px;
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    .button #submit {
+        width: 100px;
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    .tabs span {
+        font-size: 0.8rem;
+    }
+
+    .controls button #clear-all {
+        width: 100px;
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+}
